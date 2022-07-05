@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VeeamBackOfficeUnit.Test.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="VeeamAPI" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://10.50.41.44:9398</Value>
+    </Setting>
+    <Setting Name="PassVeeam" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Basic QWRtaW5pc3RyYXRvcjpBZGRsaW5rMTIzIQ==</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

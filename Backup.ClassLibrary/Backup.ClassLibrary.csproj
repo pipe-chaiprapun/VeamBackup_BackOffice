@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FEBA704-8429-4597-A9D3-E89A0706E6F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Backup.ClassLibrary</RootNamespace>
+    <AssemblyName>Backup.ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Configuration.Interface, Version=1.1.2.28032, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Configuration.Interface.1.1.2.28032\lib\net40\Configuration.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PasswordUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PasswordUtility.1.0.0\lib\PasswordUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Select.HtmlToPdf, Version=17.1.0.0, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <HintPath>..\packages\Select.HtmlToPdf.17.1.0\lib\net40\Select.HtmlToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Management.Automation.dll.10.0.10586.0\lib\net40\System.Management.Automation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IAddUser.cs" />
+    <Compile Include="Abstract\IAppRep.cs" />
+    <Compile Include="Abstract\IAuthorizationRep.cs" />
+    <Compile Include="Abstract\IDashboard.cs" />
+    <Compile Include="Abstract\IExport.cs" />
+    <Compile Include="Abstract\IGetTable.cs" />
+    <Compile Include="Abstract\Iinvoices.cs" />
+    <Compile Include="Abstract\ILogAction.cs" />
+    <Compile Include="Abstract\INakivoAPI.cs" />
+    <Compile Include="Abstract\IOption.cs" />
+    <Compile Include="Abstract\IPackages.cs" />
+    <Compile Include="Abstract\IClients.cs" />
+    <Compile Include="Abstract\IPayments.cs" />
+    <Compile Include="Abstract\Ipolicy.cs" />
+    <Compile Include="Abstract\IPosition.cs" />
+    <Compile Include="Abstract\IProlongPackage.cs" />
+    <Compile Include="Abstract\IPromoCode.cs" />
+    <Compile Include="Abstract\IRefund.cs" />
+    <Compile Include="Abstract\IReport.cs" />
+    <Compile Include="Abstract\IRequest.cs" />
+    <Compile Include="Abstract\IRequestNewPackage.cs" />
+    <Compile Include="Abstract\IRequestsHistory.cs" />
+    <Compile Include="Abstract\IResallerInvoice.cs" />
+    <Compile Include="Abstract\IReseller.cs" />
+    <Compile Include="Abstract\ISetting.cs" />
+    <Compile Include="Abstract\IUpgradePackage.cs" />
+    <Compile Include="Abstract\IUser.cs" />
+    <Compile Include="Abstract\IVeeamCC.cs" />
+    <Compile Include="Abstract\IVeeamCC2.cs" />
+    <Compile Include="Concrete\AddUser.cs" />
+    <Compile Include="Concrete\App.cs" />
+    <Compile Include="Concrete\Authorization.cs" />
+    <Compile Include="Concrete\BackOfficeDB.cs" />
+    <Compile Include="Concrete\Dashboard.cs" />
+    <Compile Include="Concrete\Export.cs" />
+    <Compile Include="Concrete\GetTable.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoAPI.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\BackupObject\ObjectList.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Inventory\InventoryItems.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Inventory\ItemInfo.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Job\JobInfo.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Job\JobList.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Repository\RepositoryInfo.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Repository\RepositoryList.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Tenant\CreateTenant.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Tenant\ListTenant.cs" />
+    <Compile Include="Concrete\Nakivo\NakivoModel\Tenant\TenantInfo.cs" />
+    <Compile Include="Concrete\Option.cs" />
+    <Compile Include="Concrete\ProlongPackage.cs" />
+    <Compile Include="Concrete\PromoCode.cs" />
+    <Compile Include="Concrete\Refund.cs" />
+    <Compile Include="Concrete\Request.cs" />
+    <Compile Include="Concrete\RequestNewPackage.cs" />
+    <Compile Include="Concrete\RequestsHistory.cs" />
+    <Compile Include="Concrete\ImpReseller.cs" />
+    <Compile Include="Concrete\ResallerInvoice.cs" />
+    <Compile Include="Concrete\UpgradePackage.cs" />
+    <Compile Include="Concrete\VeeamCC2.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\CloudFailoverPlans.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\CloudHardwarePlan.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\CloudHardwarePlanCreateSpec.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\CreateCloudTenantSpec.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\ReplicaSession.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\Tenant.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\TenantRep.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\VccGetStorage .cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\VccReplication.cs" />
+    <Compile Include="Entity\BackOfficePaypalRefund.cs" />
+    <Compile Include="Entity\Customer_Notification.cs" />
+    <Compile Include="Entity\Option9T.cs" />
+    <Compile Include="Entity\Packages2.cs" />
+    <Compile Include="Entity\Cart.cs" />
+    <Compile Include="Entity\Packages_m.cs" />
+    <Compile Include="Entity\Package_manage.cs" />
+    <Compile Include="Entity\Package_VeeamBackup.cs" />
+    <Compile Include="Entity\Package_VeeamReplication.cs" />
+    <Compile Include="Entity\Paypal_Refund.cs" />
+    <Compile Include="Entity\Promo_code.cs" />
+    <Compile Include="Entity\Report_Refund.cs" />
+    <Compile Include="Entity\Reseller.cs" />
+    <Compile Include="Entity\Reseller_Address.cs" />
+    <Compile Include="Entity\Reseller_Bills.cs" />
+    <Compile Include="Entity\Reseller_Company.cs" />
+    <Compile Include="Entity\Reseller_Contract.cs" />
+    <Compile Include="Entity\Reseller_Key.cs" />
+    <Compile Include="Entity\Reseller_Notification.cs" />
+    <Compile Include="Entity\Reseller_Payment.cs" />
+    <Compile Include="Entity\Reseller_sales.cs" />
+    <Compile Include="Entity\StatusCode.cs" />
+    <Compile Include="Entity\vBackOfficeClients.cs" />
+    <Compile Include="Entity\vBackOfficeClients_new.cs" />
+    <Compile Include="Entity\vBackOfficePackages.cs" />
+    <Compile Include="Entity\vBackOfficePayments.cs" />
+    <Compile Include="Entity\vBackOfficeReport.cs" />
+    <Compile Include="Entity\vBackOfficeRequest.cs" />
+    <Compile Include="Entity\VBackOfficeRequestsHistory.cs" />
+    <Compile Include="Entity\vBackOfficeUPgrade.cs" />
+    <Compile Include="Entity\vBackOfficeUser.cs" />
+    <Compile Include="Entity\VBackupBackOfficeRequestsNewPackage.cs" />
+    <Compile Include="Entity\vBOviewInvoiceTab.cs" />
+    <Compile Include="Entity\Veeam_Tenant.cs" />
+    <Compile Include="Entity\vPaymentDetails.cs" />
+    <Compile Include="Entity\v_BOinvoice.cs" />
+    <Compile Include="Entity\v_ChangeStatusBill.cs" />
+    <Compile Include="Entity\v_GetPackage_manage.cs" />
+    <Compile Include="Entity\v_Get_InvoviceById_package_backup.cs" />
+    <Compile Include="Entity\v_Get_InvoviceById_package_backup_Nakivo.cs" />
+    <Compile Include="Entity\v_Get_InvoviceById_package_backup_Nakivo_resaller.cs" />
+    <Compile Include="Entity\v_Get_InvoviceById_package_backup_resaller.cs" />
+    <Compile Include="Entity\v_Get_InvoviceById_package_replication.cs" />
+    <Compile Include="Entity\v_Get_InvoviceById_package_replication_resaller.cs" />
+    <Compile Include="Entity\v_Invovice_tap.cs" />
+    <Compile Include="Entity\v_PackageTap.cs" />
+    <Compile Include="Entity\v_PackageTap_viewReport.cs" />
+    <Compile Include="Entity\v_Products_Price.cs" />
+    <Compile Include="Entity\v_Repository.cs" />
+    <Compile Include="Entity\v_Reseller.cs" />
+    <Compile Include="Entity\v_Reseller_Bill.cs" />
+    <Compile Include="Entity\v_Reseller_Invoices_BO.cs" />
+    <Compile Include="Entity\v_Reseller_Invoices_View_BO.cs" />
+    <Compile Include="Entity\v_Reseller_Order.cs" />
+    <Compile Include="Models\BackupTaskSession.cs" />
+    <Compile Include="Models\BO_Message_return.cs" />
+    <Compile Include="Models\getFailoverPlan.cs" />
+    <Compile Include="Models\getInvoicesDetail.cs" />
+    <Compile Include="Concrete\Invoices.cs" />
+    <Compile Include="Concrete\LogAction.cs" />
+    <Compile Include="Concrete\Packages.cs" />
+    <Compile Include="Concrete\Clients.cs" />
+    <Compile Include="Concrete\Payments.cs" />
+    <Compile Include="Concrete\Policy.cs" />
+    <Compile Include="Concrete\Position.cs" />
+    <Compile Include="Concrete\Report.cs" />
+    <Compile Include="Concrete\Security\App_Hash.cs" />
+    <Compile Include="Concrete\Security\App_Securies.cs" />
+    <Compile Include="Concrete\SendMail.cs" />
+    <Compile Include="Concrete\Setting.cs" />
+    <Compile Include="Concrete\User.cs" />
+    <Compile Include="Concrete\Util\Util.cs" />
+    <Compile Include="Concrete\VeeamCloudConnect\VeeamCC.cs" />
+    <Compile Include="Entity\Address.cs" />
+    <Compile Include="Entity\BO_Employee.cs" />
+    <Compile Include="Entity\BO_LogActionsEmployee.cs" />
+    <Compile Include="Entity\BO_Log_Signin.cs" />
+    <Compile Include="Entity\BO_Position.cs" />
+    <Compile Include="Entity\ChatMessage.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\CustomerOnline.cs" />
+    <Compile Include="Entity\EmailAddress.cs" />
+    <Compile Include="Entity\Log_SignIn.cs" />
+    <Compile Include="Entity\Package_Type.cs" />
+    <Compile Include="Entity\Products_Price.cs" />
+    <Compile Include="Entity\UserOnline.cs" />
+    <Compile Include="Entity\vBackOfficeLogActions.cs" />
+    <Compile Include="Entity\vBOInvoiceDetails.cs" />
+    <Compile Include="Models\BackupServers.cs" />
+    <Compile Include="Models\ClientInfo.cs" />
+    <Compile Include="Models\getCountSignin.cs" />
+    <Compile Include="Models\getInvoicesDetail_backup.cs" />
+    <Compile Include="Models\getPackageFromCart.cs" />
+    <Compile Include="Models\CloudHardwarePlans.cs" />
+    <Compile Include="Models\m_Dashboard.cs" />
+    <Compile Include="Models\getRepositories.cs" />
+    <Compile Include="Models\m_filter_reseller.cs" />
+    <Compile Include="Models\m_getRefund.cs" />
+    <Compile Include="Models\m_InvoiceBackupTryGanerate.cs" />
+    <Compile Include="Models\m_InvoiceReplicationTryGanerate.cs" />
+    <Compile Include="Models\m_invoices.cs" />
+    <Compile Include="Models\m_MessageTemp.cs" />
+    <Compile Include="Models\m_payments.cs" />
+    <Compile Include="Models\m_Prolonged_package.cs" />
+    <Compile Include="Models\m_ProlongReturn.cs" />
+    <Compile Include="Models\m_RequestUpate.cs" />
+    <Compile Include="Models\m_reseller.cs" />
+    <Compile Include="Models\m_Table_row.cs" />
+    <Compile Include="Models\PackageInformation.cs" />
+    <Compile Include="Models\QueryResult.cs" />
+    <Compile Include="Models\RegisterCustomers.cs" />
+    <Compile Include="Models\Repositories.cs" />
+    <Compile Include="Models\rptClientPayments.cs" />
+    <Compile Include="Models\VeeamReport.cs" />
+    <Compile Include="Models\VeeamTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Backup.ClassLibrary.dll.config" />
+    <None Include="bin\Debug\Select.Html.dep" />
+    <None Include="bin\Release\Backup.ClassLibrary.dll.config" />
+    <None Include="bin\Release\Select.Html.dep" />
+    <None Include="Concrete\Security\private\service.key" />
+    <None Include="Concrete\Security\private\service.pub" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Backup.ClassLibrary.dll" />
+    <Content Include="bin\Debug\Backup.ClassLibrary.pdb" />
+    <Content Include="bin\Debug\Configuration.Interface.dll" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\PasswordUtility.dll" />
+    <Content Include="bin\Debug\Select.HtmlToPdf.dll" />
+    <Content Include="bin\Debug\Select.HtmlToPdf.xml" />
+    <Content Include="bin\Debug\System.Management.Automation.dll" />
+    <Content Include="bin\Debug\System.Web.Http.Common.dll" />
+    <Content Include="bin\Release\Backup.ClassLibrary.dll" />
+    <Content Include="bin\Release\Backup.ClassLibrary.pdb" />
+    <Content Include="bin\Release\Configuration.Interface.dll" />
+    <Content Include="bin\Release\EntityFramework.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Release\EntityFramework.xml" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\PasswordUtility.dll" />
+    <Content Include="bin\Release\Select.HtmlToPdf.dll" />
+    <Content Include="bin\Release\Select.HtmlToPdf.xml" />
+    <Content Include="bin\Release\System.Management.Automation.dll" />
+    <Content Include="bin\Release\System.Web.Http.Common.dll" />
+    <Content Include="bin\Release\System.Web.Http.Common.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
